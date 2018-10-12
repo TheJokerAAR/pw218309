@@ -1,0 +1,22 @@
+body{
+	background: rgb(43,43,43);
+	font-size: 16px; /*1em*/
+	margin: 0px auto;
+	max-width: 2090px;
+	min-height: 1246px;
+}
+header{
+	background: rgb(240,240,240);
+}
+header input{
+	width: 235px;
+	height: 50px;
+}
+header img{
+	width: 1527px;
+	height: 87px;
+}
+#primerSeccion article{
+	width: 18%;
+	display: inline-block;
+}

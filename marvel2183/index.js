@@ -16,10 +16,11 @@ var buscaComics = function(){
 	//sesionStorage
 	PantallaDetalle=new BrowserWindow({width:400,height:425});
 	PantallaDetalle.loadURL(url.format({
-		pathnAME: path.join(__dirname,'PantallaDetalle.html'),
+		pathname: path.join(__dirname,'PantallaDetalle.html'),
 		protocol: 'file',
 		slashes: true
 	}))
+	PantallaDetalle.show();
 }
 
 var buscaPersonaje=function() {
@@ -29,9 +30,9 @@ var buscaPersonaje=function() {
 	fetch(url+personaje)
 	.then(datos=>datos.json())
 	.then(datos=>{
-		var cantidad=datos.data.count
+		var cantidad=datos.data.count;
 		var foto=''
-		document.getElementById('abajo').innerHTML=''
+		document.getElementById('abajo').innerHTML='';
 		for(let i=0;i<cantidad;i++){
 			foto=datos.data.results[i].thumbnail.path+"."+
 			datos.data.results[i].thumbnail.extension
